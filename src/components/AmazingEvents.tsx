@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Button, Link } from '@mui/material';
+import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Button, Link, Divider } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
@@ -189,6 +189,7 @@ const AmazingEvents = () => {
               Sign up now
             </Button>
           </CtaContent>
+          <Divider sx={{ borderColor: '#333333', mt: 4 }} />
         </Container>
       </CtaSection>
     </>
