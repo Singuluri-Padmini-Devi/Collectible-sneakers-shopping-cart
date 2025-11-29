@@ -2,12 +2,17 @@ import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Button,
 import { styled } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const EventsSection = styled(Box)(({ theme }) => ({
+const EventsSection = styled(Box)({
   backgroundColor: '#FFF9C4',
+  backgroundImage: 'url(/images/blue wave.png)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'bottom',
+  backgroundRepeat: 'no-repeat',
   padding: '60px 0',
   position: 'relative',
   overflow: 'hidden',
-}));
+  width: '100%',
+});
 
 const SectionHeader = styled(Box)({
   display: 'flex',
@@ -102,22 +107,22 @@ const AmazingEvents = () => {
     {
       title: 'Ipsum',
       subtitle: 'Varius est diam',
-      image: 'https://via.placeholder.com/400x280/E0E0E0/000000?text=Event+1',
+      image: '/images/amazing eve shoe 1.png',
     },
     {
       title: 'Purus',
       subtitle: 'Diam felis tempus',
-      image: 'https://via.placeholder.com/400x280/4A90E2/FFFFFF?text=Event+2',
+      image: '/images/amazing eve shoe 2.png',
     },
     {
-      title: 'Uma',
+      title: 'Urna',
       subtitle: 'Vel nulla varius',
-      image: 'https://via.placeholder.com/400x280/50C878/FFFFFF?text=Event+3',
+      image: '/images/amazing eve shoe 3.png',
     },
     {
       title: 'Vitae',
       subtitle: 'Amet tristique a',
-      image: 'https://via.placeholder.com/400x280/FFD700/000000?text=Event+4',
+      image: '/images/amazing eve shoe 4.png',
     },
   ];
 

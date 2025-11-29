@@ -15,6 +15,7 @@ const SectionHeader = styled(Box)({
 });
 
 const ArticleCard = styled(Card)({
+  backgroundColor: '#FFFFFF',
   height: '100%',
   borderRadius: '16px',
   overflow: 'hidden',
