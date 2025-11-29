@@ -9,7 +9,7 @@ const EventsSection = styled(Box)({
   backgroundRepeat: 'no-repeat',
   padding: '60px 0',
   position: 'relative',
-  overflow: 'hidden',
+  overflow: 'visible',
   width: '100%',
 });
 
@@ -74,12 +74,12 @@ const CtaSection = styled(Box)({
 
 const ThreeDotsImage = styled('img')({
   position: 'absolute',
-  bottom: 0,
+  bottom: -182,
   right: 0,
   width: 'auto',
   height: 'auto',
   maxWidth: '200px',
-  zIndex: 0,
+  zIndex: 10,
   pointerEvents: 'none',
 });
 
@@ -132,7 +132,11 @@ const AmazingEvents = () => {
   return (
     <>
       <EventsSection>
-        <Container maxWidth="lg">
+        <ThreeDotsImage
+          src="/images/three dots.png"
+          alt="Decorative dots"
+        />
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
           <SectionHeader>
             <Typography variant="h2" sx={{ color: '#1A1F2E', fontWeight: 700 }}>
               Amazing events
@@ -165,10 +169,6 @@ const AmazingEvents = () => {
         </Container>
       </EventsSection>
       <CtaSection>
-        <ThreeDotsImage
-          src="/images/three dots.png"
-          alt="Decorative dots"
-        />
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
           <CtaContent>
             <Typography variant="h2" sx={{ color: '#FFFFFF', fontWeight: 700 }}>
