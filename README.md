@@ -1,3 +1,4 @@
+Hosting https://collectible-sneakers-shopping-cart.vercel.app/
 # Collers - Collectible Sneakers Landing Page
 
 A modern, responsive React + TypeScript landing page for a collectible sneakers platform, built with Material-UI (MUI).
