@@ -5,35 +5,42 @@ const GrowSection = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
   backgroundImage: 'url(/images/Waves.png)',
   backgroundSize: 'cover',
-  backgroundPosition: 'bottom right',
   backgroundRepeat: 'no-repeat',
   padding: '60px 0',
   position: 'relative',
   overflow: 'hidden',
+  width: '100%',
 }));
 
-const ContentWrapper = styled(Box)(({ theme }) => ({
+const HeaderSection = styled(Box)({
+  width: '100%',
+  marginBottom: '40px',
+  position: 'relative',
+  zIndex: 1,
+});
+
+const BottomRow = styled(Box)(({ theme }) => ({
   display: 'flex',
-  gap: '60px',
+  gap: '40px',
   alignItems: 'flex-start',
-  flexWrap: 'wrap',
   position: 'relative',
   zIndex: 1,
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
-    gap: '40px',
+    gap: '30px',
   },
 }));
 
-const TextSection = styled(Box)(({ theme }) => ({
-  flex: '1 1 500px',
+const LeftImageSection = styled(Box)(({ theme }) => ({
+  flex: '0 0 auto',
+  width: 'auto',
   [theme.breakpoints.down('md')]: {
     width: '100%',
   },
 }));
 
 const MediaSection = styled(Box)(({ theme }) => ({
-  flex: '1 1 500px',
+  flex: '1 1 auto',
   position: 'relative',
   [theme.breakpoints.down('md')]: {
     width: '100%',
@@ -90,11 +97,10 @@ const WindowImage = styled('img')({
 });
 
 const LeftImage = styled('img')({
-  maxWidth: '400px',
+  maxWidth: '250px',
   width: '100%',
   height: 'auto',
   objectFit: 'contain',
-  marginTop: '24px',
 });
 
 
@@ -102,30 +108,32 @@ const GrowCollection = () => {
   return (
     <GrowSection>
       <Container maxWidth="lg">
-        <ContentWrapper>
-          <TextSection>
-            <Typography variant="h2" sx={{ mb: 4, color: '#1A1F2E', fontWeight: 700 }}>
-              Grow your collection
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{ mb: 3, color: '#666666', lineHeight: 1.8, fontSize: '1.1rem' }}
-            >
-              Enim neque massa porta adipiscing elit. Sem libero id faucibus nibh amet dictum
-              pellentesque sed. Eu non turpis risus odio sapien, fames sit rhoncus.
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{ mb: 4, color: '#666666', lineHeight: 1.8, fontSize: '1.1rem' }}
-            >
-              Nec magna sed interdum sit purus tellus. Et volutpat proin neque placerat at
-              bibendum quam tellus.
-            </Typography>
+        <HeaderSection>
+          <Typography variant="h2" sx={{ mb: 3, color: '#1A1F2E', fontWeight: 700 }}>
+            Grow your collection
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ mb: 2, color: '#666666', lineHeight: 1.8, fontSize: '1.1rem' }}
+          >
+            Enim neque massa porta adipiscing elit. Sem libero id faucibus nibh amet dictum
+            pellentesque sed. Eu non turpis risus odio sapien, fames sit rhoncus.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ mb: 0, color: '#666666', lineHeight: 1.8, fontSize: '1.1rem' }}
+          >
+            Nec magna sed interdum sit purus tellus. Et volutpat proin neque placerat at
+            bibendum quam tellus.
+          </Typography>
+        </HeaderSection>
+        <BottomRow>
+          <LeftImageSection>
             <LeftImage
               src="/images/section 5 left image.png"
               alt="Navigation sidebar"
             />
-          </TextSection>
+          </LeftImageSection>
           <MediaSection>
             <WindowStack>
               <BrowserWindow sx={{ zIndex: 1, top: 0, left: 0 }}>
@@ -163,7 +171,7 @@ const GrowCollection = () => {
               </BrowserWindow>
             </WindowStack>
           </MediaSection>
-        </ContentWrapper>
+        </BottomRow>
       </Container>
     </GrowSection>
   );
