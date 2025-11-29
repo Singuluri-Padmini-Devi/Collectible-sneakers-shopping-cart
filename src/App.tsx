@@ -8,6 +8,7 @@ import ProductShowcase from './components/ProductShowcase';
 import WhyJoinUs from './components/WhyJoinUs';
 import Testimonials from './components/Testimonials';
 import GrowCollection from './components/GrowCollection';
+import MapSection from './components/MapSection';
 import Articles from './components/Articles';
 import AmazingEvents from './components/AmazingEvents';
 import Footer from './components/Footer';
@@ -23,6 +24,7 @@ function App() {
       <WhyJoinUs />
       <Testimonials />
       <GrowCollection />
+      <MapSection />
       <Articles />
       <AmazingEvents />
       <Footer />
