@@ -2,10 +2,10 @@ import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Link, S
 import { styled } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const ArticlesSection = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
+const ArticlesSection = styled(Box)({
+  backgroundColor: '#FFFFFF',
   padding: '60px 0',
-}));
+});
 
 const SectionHeader = styled(Box)({
   display: 'flex',
@@ -71,22 +71,22 @@ const MoreLink = styled(Link)(({ theme }) => ({
 const Articles = () => {
   const articles = [
     {
-      image: 'https://via.placeholder.com/400x240/FFD700/000000?text=Article+1',
+      image: '/images/shoe img 1.png',
       title: 'Congue velit risus',
       description: 'Nunc gravida semper tellus neque scelerisque eget tincidunt in.',
     },
     {
-      image: 'https://via.placeholder.com/400x240/4A90E2/FFFFFF?text=Article+2',
+      image: '/images/shoe img 2.png',
       title: 'Ut mauris',
       description: 'Phasellus venenatis massa bibendum posuere dictum tristique.',
     },
     {
-      image: 'https://via.placeholder.com/400x240/50C878/FFFFFF?text=Article+3',
+      image: '/images/shoe img 3.png',
       title: 'Aliquam tortor nunc',
       description: 'Leo mollis fermentum praesent in condimentum id velit purus in.',
     },
     {
-      image: 'https://via.placeholder.com/400x240/9B59B6/FFFFFF?text=Article+4',
+      image: '/images/shoe img 4.png',
       title: 'Fusce non morbi',
       description: 'In sed bibendum metus pretium cursus tellus pharetra.',
     },
