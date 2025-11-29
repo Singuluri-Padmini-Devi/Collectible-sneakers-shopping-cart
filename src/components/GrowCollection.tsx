@@ -3,6 +3,10 @@ import { styled } from '@mui/material/styles';
 
 const GrowSection = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
+  backgroundImage: 'url(/images/Waves.png)',
+  backgroundSize: 'cover',
+  backgroundPosition: 'bottom right',
+  backgroundRepeat: 'no-repeat',
   padding: '60px 0',
   position: 'relative',
   overflow: 'hidden',
@@ -38,10 +42,8 @@ const MediaSection = styled(Box)(({ theme }) => ({
 
 const WindowStack = styled(Box)({
   position: 'relative',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '0',
-  minHeight: '400px',
+  width: '100%',
+  minHeight: '500px',
 });
 
 const BrowserWindow = styled(Box)({
@@ -49,6 +51,21 @@ const BrowserWindow = styled(Box)({
   overflow: 'hidden',
   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
   backgroundColor: '#FFFFFF',
+  position: 'absolute',
+  width: '100%',
+  maxWidth: '500px',
+  '&:nth-of-type(1)': {
+    width: '100%',
+    maxWidth: '500px',
+  },
+  '&:nth-of-type(2)': {
+    width: '95%',
+    maxWidth: '475px',
+  },
+  '&:nth-of-type(3)': {
+    width: '90%',
+    maxWidth: '450px',
+  },
 });
 
 const WindowHeader = styled(Box)({
@@ -73,22 +90,13 @@ const WindowImage = styled('img')({
 });
 
 const LeftImage = styled('img')({
+  maxWidth: '400px',
   width: '100%',
   height: 'auto',
   objectFit: 'contain',
   marginTop: '24px',
 });
 
-const WavesImage = styled('img')({
-  position: 'absolute',
-  bottom: 0,
-  right: 0,
-  width: 'auto',
-  height: 'auto',
-  maxWidth: '50%',
-  zIndex: 0,
-  pointerEvents: 'none',
-});
 
 const GrowCollection = () => {
   return (
@@ -120,7 +128,7 @@ const GrowCollection = () => {
           </TextSection>
           <MediaSection>
             <WindowStack>
-              <BrowserWindow sx={{ zIndex: 3, position: 'relative' }}>
+              <BrowserWindow sx={{ zIndex: 1, top: 0, left: 0 }}>
                 <WindowHeader>
                   <Dot sx={{ backgroundColor: '#FF5F57' }} />
                   <Dot sx={{ backgroundColor: '#FFBD2E' }} />
@@ -131,7 +139,7 @@ const GrowCollection = () => {
                   alt="Sneaker collection 1"
                 />
               </BrowserWindow>
-              <BrowserWindow sx={{ zIndex: 2, marginLeft: { xs: '20px', md: '40px' }, marginTop: { xs: '-20px', md: '-40px' }, position: 'relative' }}>
+              <BrowserWindow sx={{ zIndex: 2, top: { xs: '20px', md: '40px' }, left: { xs: '20px', md: '40px' } }}>
                 <WindowHeader>
                   <Dot sx={{ backgroundColor: '#FF5F57' }} />
                   <Dot sx={{ backgroundColor: '#FFBD2E' }} />
@@ -142,7 +150,7 @@ const GrowCollection = () => {
                   alt="Sneaker collection 2"
                 />
               </BrowserWindow>
-              <BrowserWindow sx={{ zIndex: 1, marginLeft: { xs: '40px', md: '80px' }, marginTop: { xs: '-20px', md: '-40px' }, position: 'relative' }}>
+              <BrowserWindow sx={{ zIndex: 3, top: { xs: '40px', md: '80px' }, left: { xs: '40px', md: '80px' } }}>
                 <WindowHeader>
                   <Dot sx={{ backgroundColor: '#FF5F57' }} />
                   <Dot sx={{ backgroundColor: '#FFBD2E' }} />
@@ -156,10 +164,6 @@ const GrowCollection = () => {
             </WindowStack>
           </MediaSection>
         </ContentWrapper>
-        <WavesImage
-          src="/images/Waves.png"
-          alt="Waves decoration"
-        />
       </Container>
     </GrowSection>
   );
