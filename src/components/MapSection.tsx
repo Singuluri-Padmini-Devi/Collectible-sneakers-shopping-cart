@@ -1,26 +1,13 @@
-import { Box, Container, Typography, Card } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const MapSection = styled(Box)({
-  backgroundColor: '#A0522D',
+  backgroundColor: '#78350F',
   padding: '60px 0',
   position: 'relative',
   overflow: 'hidden',
   width: '100%',
 });
-
-const TopSection = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  gap: '40px',
-  alignItems: 'flex-start',
-  marginBottom: '40px',
-  position: 'relative',
-  zIndex: 1,
-  [theme.breakpoints.down('md')]: {
-    flexDirection: 'column',
-    gap: '30px',
-  },
-}));
 
 const MapWrapper = styled(Box)({
   width: '100%',
@@ -31,14 +18,13 @@ const MapWrapper = styled(Box)({
   minHeight: '600px',
 });
 
-const LeftIconSection = styled(Box)(({ theme }) => ({
-  flex: '0 0 auto',
-  [theme.breakpoints.down('md')]: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-  },
-}));
+const LeftIconSection = styled(Box)({
+  position: 'absolute',
+  left: 0,
+  top: '50%',
+  transform: 'translateY(-50%)',
+  zIndex: 5,
+});
 
 const LeftIcon = styled('img')({
   maxWidth: '200px',
@@ -79,50 +65,19 @@ const StatsDisplay = styled(Box)({
   textAlign: 'center',
 });
 
-const NotificationCard = styled(Card)(({ theme }) => ({
-  position: 'absolute',
-  top: '15%',
-  left: '15%',
-  backgroundColor: '#FFFFFF',
-  padding: '16px',
-  borderRadius: '12px',
-  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
-  zIndex: 4,
-  maxWidth: '250px',
-  [theme.breakpoints.down('md')]: {
-    position: 'relative',
-    top: 'auto',
-    left: 'auto',
-    marginTop: '20px',
-  },
-}));
 
-const NotificationImage = styled('img')({
-  width: '100%',
-  height: 'auto',
-  borderRadius: '8px',
-  marginBottom: '12px',
-});
-
-const TextSection = styled(Box)({
-  flex: '0 0 auto',
-  maxWidth: '300px',
-  textAlign: 'left',
-});
 
 const MapSectionComponent = () => {
   return (
     <MapSection>
       <Container maxWidth="lg">
-        <TopSection>
+        <MapWrapper>
           <LeftIconSection>
             <LeftIcon
               src="/images/left shoes text icon.png"
               alt="Shoes icon"
             />
           </LeftIconSection>
-        </TopSection>
-        <MapWrapper>
           <MapImage
             src="/images/map.png"
             alt="World map"
