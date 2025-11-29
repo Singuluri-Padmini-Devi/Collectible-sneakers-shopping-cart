@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Button, Stack, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Box, Container, Typography, Button, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -10,7 +10,7 @@ const WhyJoinSection = styled(Box)({
   overflow: 'hidden',
 });
 
-const ContentCard = styled(Box)(({ theme }) => ({
+const ContentCard = styled(Box)({
   backgroundColor: '#FFFFFF',
   borderRadius: '24px',
   padding: '60px',
@@ -20,7 +20,7 @@ const ContentCard = styled(Box)(({ theme }) => ({
   flexWrap: 'wrap',
   position: 'relative',
   zIndex: 2,
-}));
+});
 
 const TextSection = styled(Box)({
   flex: '1 1 400px',

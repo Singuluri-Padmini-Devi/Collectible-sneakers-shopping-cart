@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Box, Container, Typography, Card, CardContent, Avatar, Stack, IconButton } from '@mui/material';
+import { Box, Container, Typography, Card, Avatar, Stack, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -38,7 +38,7 @@ const CarouselTrack = styled(Box)({
   },
 });
 
-const TestimonialCard = styled(Card)(({ theme }) => ({
+const TestimonialCard = styled(Card)({
   minWidth: '380px',
   padding: '32px',
   backgroundColor: '#FFFFFF',
@@ -47,7 +47,7 @@ const TestimonialCard = styled(Card)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   height: '100%',
-}));
+});
 
 const CompanyHeader = styled(Box)({
   display: 'flex',

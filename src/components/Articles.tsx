@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Link, Stack } from '@mui/material';
+import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Link } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 

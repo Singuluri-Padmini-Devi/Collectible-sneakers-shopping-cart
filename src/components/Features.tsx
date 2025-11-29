@@ -6,7 +6,7 @@ const FeaturesSection = styled(Box)(({ theme }) => ({
   padding: '80px 0',
 }));
 
-const FeatureCard = styled(Paper)(({ theme }) => ({
+const FeatureCard = styled(Paper)({
   padding: '32px',
   height: '100%',
   backgroundColor: 'transparent',
@@ -14,7 +14,7 @@ const FeatureCard = styled(Paper)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
-}));
+});
 
 const IconImage = styled('img')({
   width: '64px',
