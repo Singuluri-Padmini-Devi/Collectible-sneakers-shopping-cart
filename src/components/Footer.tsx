@@ -7,11 +7,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LanguageIcon from '@mui/icons-material/Language';
 
-const FooterSection = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
+const FooterSection = styled(Box)({
+  backgroundColor: '#0F172A',
   padding: '80px 0 40px',
   color: '#FFFFFF',
-}));
+});
 
 const FooterColumn = styled(Box)({
   display: 'flex',

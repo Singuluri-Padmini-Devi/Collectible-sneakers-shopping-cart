@@ -65,12 +65,23 @@ const BuyTicketsLink = styled(Link)(({ theme }) => ({
   },
 }));
 
-const CtaSection = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
+const CtaSection = styled(Box)({
+  backgroundColor: '#0F172A',
   padding: '60px 0',
   position: 'relative',
   overflow: 'hidden',
-}));
+});
+
+const ThreeDotsImage = styled('img')({
+  position: 'absolute',
+  bottom: 0,
+  right: 0,
+  width: 'auto',
+  height: 'auto',
+  maxWidth: '200px',
+  zIndex: 0,
+  pointerEvents: 'none',
+});
 
 const CtaContent = styled(Box)({
   display: 'flex',
@@ -80,13 +91,6 @@ const CtaContent = styled(Box)({
   gap: '24px',
 });
 
-const DecorativeShape = styled(Box)({
-  position: 'absolute',
-  borderRadius: '30%',
-  filter: 'blur(60px)',
-  opacity: 0.3,
-  zIndex: 0,
-});
 
 const ExploreLink = styled(Link)(({ theme }) => ({
   color: theme.palette.primary.main,
@@ -161,23 +165,9 @@ const AmazingEvents = () => {
         </Container>
       </EventsSection>
       <CtaSection>
-        <DecorativeShape
-          sx={{
-            width: '400px',
-            height: '400px',
-            backgroundColor: '#9B59B6',
-            bottom: '-10%',
-            right: '-5%',
-          }}
-        />
-        <DecorativeShape
-          sx={{
-            width: '350px',
-            height: '350px',
-            backgroundColor: '#FF1493',
-            bottom: '-5%',
-            right: '10%',
-          }}
+        <ThreeDotsImage
+          src="/images/three dots.png"
+          alt="Decorative dots"
         />
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
           <CtaContent>
