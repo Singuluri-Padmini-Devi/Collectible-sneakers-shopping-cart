@@ -1,12 +1,11 @@
-import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Button, Link, Stack } from '@mui/material';
+import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Button, Link } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const EventsSection = styled(Box)({
   backgroundColor: '#FFF9C4',
-  backgroundImage: 'url(/images/blue wave.png)',
+  backgroundImage: 'url("/images/blue wave.png")',
   backgroundSize: 'cover',
-  backgroundPosition: 'bottom',
   backgroundRepeat: 'no-repeat',
   padding: '60px 0',
   position: 'relative',
@@ -39,26 +38,26 @@ const EventCard = styled(Card)({
 const StyledCardMedia = styled(CardMedia)({
   height: '280px',
   objectFit: 'cover',
+  width: '100%',
+  borderRadius: '8px',
+});
+
+const EventLabel = styled(Typography)({
+  color: '#999999',
+  fontSize: '0.85rem',
+  marginBottom: '4px',
+  fontWeight: 400,
 });
 
 const EventTitle = styled(Typography)({
   fontWeight: 600,
   color: '#1A1F2E',
-  marginBottom: '8px',
-});
-
-const EventSubtitle = styled(Typography)({
-  color: '#666666',
-  fontSize: '0.9rem',
   marginBottom: '16px',
 });
 
 const BuyTicketsLink = styled(Link)(({ theme }) => ({
   color: theme.palette.primary.main,
   textDecoration: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  gap: '8px',
   fontWeight: 500,
   fontSize: '1rem',
   '&:hover': {
@@ -143,14 +142,15 @@ const AmazingEvents = () => {
             {events.map((event, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
                 <EventCard>
-                  <StyledCardMedia image={event.image} title={event.title} />
                   <CardContent sx={{ padding: '24px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                    <EventTitle variant="h6">{event.title}</EventTitle>
-                    <EventSubtitle>{event.subtitle}</EventSubtitle>
+                    <Box>
+                      <EventLabel variant="body2">{event.title}</EventLabel>
+                      <EventTitle variant="h6">{event.subtitle}</EventTitle>
+                    </Box>
+                    <StyledCardMedia image={event.image} title={event.title} sx={{ mb: '16px', borderRadius: '8px' }} />
                     <Box sx={{ marginTop: 'auto' }}>
                       <BuyTicketsLink href="#">
                         Buy Tickets
-                        <ArrowForwardIcon fontSize="small" />
                       </BuyTicketsLink>
                     </Box>
                   </CardContent>
