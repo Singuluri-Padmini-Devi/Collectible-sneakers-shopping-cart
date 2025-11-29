@@ -53,47 +53,24 @@ const WindowStack = styled(Box)({
   minHeight: '500px',
 });
 
-const BrowserWindow = styled(Box)({
-  borderRadius: '12px',
-  overflow: 'hidden',
-  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
-  backgroundColor: '#FFFFFF',
+const OverlayImage = styled('img')({
   position: 'absolute',
   width: '100%',
   maxWidth: '500px',
+  height: 'auto',
+  objectFit: 'cover',
+  display: 'block',
   '&:nth-of-type(1)': {
     width: '100%',
     maxWidth: '500px',
   },
   '&:nth-of-type(2)': {
-    width: '95%',
-    maxWidth: '475px',
+    width: '95%'
   },
   '&:nth-of-type(3)': {
-    width: '90%',
+    width: '29%',
     maxWidth: '450px',
   },
-});
-
-const WindowHeader = styled(Box)({
-  backgroundColor: '#F5F5F5',
-  padding: '12px 16px',
-  display: 'flex',
-  gap: '8px',
-  borderBottom: '1px solid #E0E0E0',
-});
-
-const Dot = styled(Box)({
-  width: '12px',
-  height: '12px',
-  borderRadius: '50%',
-});
-
-const WindowImage = styled('img')({
-  width: '100%',
-  height: 'auto',
-  objectFit: 'cover',
-  display: 'block',
 });
 
 const LeftImage = styled('img')({
@@ -136,39 +113,21 @@ const GrowCollection = () => {
           </LeftImageSection>
           <MediaSection>
             <WindowStack>
-              <BrowserWindow sx={{ zIndex: 1, top: 0, left: 0 }}>
-                <WindowHeader>
-                  <Dot sx={{ backgroundColor: '#FF5F57' }} />
-                  <Dot sx={{ backgroundColor: '#FFBD2E' }} />
-                  <Dot sx={{ backgroundColor: '#28CA42' }} />
-                </WindowHeader>
-                <WindowImage
-                  src="/images/right images 1.png"
-                  alt="Sneaker collection 1"
-                />
-              </BrowserWindow>
-              <BrowserWindow sx={{ zIndex: 2, top: { xs: '20px', md: '40px' }, left: { xs: '20px', md: '40px' } }}>
-                <WindowHeader>
-                  <Dot sx={{ backgroundColor: '#FF5F57' }} />
-                  <Dot sx={{ backgroundColor: '#FFBD2E' }} />
-                  <Dot sx={{ backgroundColor: '#28CA42' }} />
-                </WindowHeader>
-                <WindowImage
-                  src="/images/right images 2.png"
-                  alt="Sneaker collection 2"
-                />
-              </BrowserWindow>
-              <BrowserWindow sx={{ zIndex: 3, top: { xs: '40px', md: '80px' }, left: { xs: '40px', md: '80px' } }}>
-                <WindowHeader>
-                  <Dot sx={{ backgroundColor: '#FF5F57' }} />
-                  <Dot sx={{ backgroundColor: '#FFBD2E' }} />
-                  <Dot sx={{ backgroundColor: '#28CA42' }} />
-                </WindowHeader>
-                <WindowImage
-                  src="/images/right images 3.png"
-                  alt="Sneaker collection 3"
-                />
-              </BrowserWindow>
+              <OverlayImage
+                src="/images/right images 1.png"
+                alt="Sneaker collection 1"
+                sx={{ zIndex: 1, top: 0, left: 0 }}
+              />
+              <OverlayImage
+                src="/images/right images 2.png"
+                alt="Sneaker collection 2"
+                sx={{ zIndex: 2, top: { xs: '20px', md: '70px' }, left: { xs: '20px', md: '90px' } }}
+              />
+              <OverlayImage
+                src="/images/right images 3.png"
+                alt="Sneaker collection 3"
+                sx={{ zIndex: 3, top: { xs: '40px', md: '92px' }, left: { xs: '40px', md: '346px' } }}
+              />
             </WindowStack>
           </MediaSection>
         </BottomRow>
