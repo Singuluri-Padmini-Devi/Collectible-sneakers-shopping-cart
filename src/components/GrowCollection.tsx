@@ -121,7 +121,7 @@ const GrowCollection = () => {
               <OverlayImage
                 src="/images/right images 2.png"
                 alt="Sneaker collection 2"
-                sx={{ zIndex: 2, top: { xs: '20px', md: '70px' }, left: { xs: '20px', md: '90px' } }}
+                sx={{ zIndex: 2, top: { xs: '20px', md: '70px' }, left: { xs: '20px', md: '90px' }, borderRadius: '8px' }}
               />
               <OverlayImage
                 src="/images/right images 3.png"
